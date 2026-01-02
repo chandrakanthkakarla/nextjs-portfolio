@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Poppins } from "next/font/google";
 import Footer from "./components/Footer";
 import ScrollToTitleOnMobile from "./components/ScrollToTitleOnMobile";
+import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
         <main className="pt-24">{children}</main>
         <Footer />
       </body>
+      <Analytics />
     </html>
   );
 }
