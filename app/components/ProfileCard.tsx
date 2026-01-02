@@ -26,7 +26,7 @@ export default function ProfileCard() {
 
         {/* name */}
         <h2 className="mt-7 text-center text-4xl font-black tracking-tight text-zinc-900">
-          Aaabad Ahmed
+          Akshay P
         </h2>
 
         {/* flame badge + dotted arc */}

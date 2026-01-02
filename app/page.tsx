@@ -1,9 +1,11 @@
+import ExperienceSection from "./components/ExperienceSection";
 import ProfileCard from "./components/ProfileCard";
 import ProjectsSection from "./components/ProjectsSection";
+import ToolsSection from "./components/ToolsSection";
 
 export default function HomePage() {
   return (
-    <main className="pt-24">
+    <main className="pt-14">
       <section className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[380px_1fr]">
           {/* LEFT: sticky (no separate scroll) */}
@@ -38,6 +40,16 @@ export default function HomePage() {
             {/* PROJECTS (animated) */}
             <section id="projects" className="scroll-mt-28">
               <ProjectsSection animated />
+            </section>
+
+            {/* Experience (animated) */}
+            <section id="experience" className="scroll-mt-28">
+              <ExperienceSection animated />
+            </section>
+            
+            {/* Tools (animated) */}
+            <section id="tools" className="scroll-mt-28">
+              <ToolsSection animated />
             </section>
           </div>
         </div>

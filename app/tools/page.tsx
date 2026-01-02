@@ -1,8 +1,21 @@
+import ProfileCard from "../components/ProfileCard";
+import ToolsSection from "../components/ToolsSection";
+
 export default function ToolsPage() {
-    return (
-        <main style={{ maxWidth: 1100, margin: "0 auto", padding: 24 }}>
-            <h1>Tools</h1>
-            <p>Here I will list my tools (UI only).</p>
-        </main>
-    );
+  return (
+    <main className="pt-24">
+      <section className="mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-[380px_1fr]">
+          <aside className="lg:sticky lg:top-24 lg:self-start">
+            <ProfileCard />
+          </aside>
+
+          {/* SAME component, no animation */}
+          <div className="pb-24">
+            <ToolsSection />
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
