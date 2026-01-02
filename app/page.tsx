@@ -1,3 +1,4 @@
+import ContactSection from "./components/ContactSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProfileCard from "./components/ProfileCard";
 import ProjectsSection from "./components/ProjectsSection";
@@ -61,6 +62,10 @@ export default function HomePage() {
             {/* Tools (animated) */}
             <section id="tools" className="scroll-mt-28">
               <ToolsSection animated />
+            </section>
+
+            <section id="contact" className="scroll-mt-28">
+              <ContactSection animated />
             </section>
           </div>
         </div>
