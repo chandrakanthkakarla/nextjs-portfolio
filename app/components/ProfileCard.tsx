@@ -39,7 +39,7 @@ export default function ProfileCard() {
         <div className="rounded-3xl bg-white p-4">
           <div className="aspect-square overflow-hidden rounded-3xl">
             <img
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=70"
+              src="/img/smart.png"
               alt="Profile"
               className="h-full w-full object-cover"
             />
