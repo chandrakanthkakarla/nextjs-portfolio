@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
               <PlaceholderCard
                 title="Currently Exploring"
-                desc="Currently Exploring: CCNA mastery, Network Architecture, SOC workflows, and AI-enhanced network monitoring."
+                desc="Looking to grow as a Network & Security Engineer, building strong expertise in advanced networking and cybersecurity, while evolving into a high-impact security professional."
               />
 
               <PlaceholderCard
