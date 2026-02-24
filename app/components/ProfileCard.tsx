@@ -62,7 +62,7 @@ export default function ProfileCard() {
 
         {/* description */}
         <p className="mt-6 text-center text-lg leading-snug text-zinc-500">
-          A Software Engineer who has developed.
+          A Network Engineer who has developed.
         </p>
 
         {/* socials */}
