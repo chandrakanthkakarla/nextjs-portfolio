@@ -37,7 +37,7 @@ export default function ProfileCard() {
       <div className="p-7">
         {/* image frame */}
         <div className="rounded-3xl bg-white p-4">
-          <div className="aspect-square overflow-hidden rounded-3xl">
+          <div className="h-[420px] overflow-hidden rounded-3xl">
             <img
               src="/img/smart.png"
               alt="Profile"
