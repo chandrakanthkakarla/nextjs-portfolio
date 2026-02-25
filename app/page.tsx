@@ -27,8 +27,7 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-zinc-400">
-                Passionate about creating intuitive and engaging user experiences.
-                Specialize in transforming ideas into beautifully crafted products.
+                Passionate about building secure and reliable network infrastructures. Focused on turning complex technical challenges into stable, high-performing systems that drive real-world impact.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-10 sm:grid-cols-3">

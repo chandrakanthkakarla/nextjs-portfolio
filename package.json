@@ -2,6 +2,19 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "homepage": "https://github.com/chandrakanthkakarla/nextjs-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/chandrakanthkakarla/nextjs-portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandrakanthkakarla/nextjs-portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,5 +42,6 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "^5"
-  }
+  },
+  "keywords": []
 }
