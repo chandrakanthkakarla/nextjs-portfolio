@@ -24,7 +24,7 @@ export default function ExperienceSection({ animated = false }: ProjectsSectionP
                 <ExperienceRow
                     title="Cognizant Technology Solutions"
                     role="Network Engineer"
-                    description="Network & Infrastructure Engineer with hands-on experience in NOC and SOC operations. Currently pursuing MCA in Cybersecurity, with a strong foundation in networking, incident management, and IT support. Experienced in monitoring, troubleshooting, SLA management, and cross-team coordination. Certified in Google IT Support, Networking, and Zero Trust (ZTCA), with a focused goal of advancing toward CCNA/CCNP-level expertise and deeper cybersecurity specialization."
+                    description="Network & Infrastructure Engineer with hands-on experience in NOC and SOC operations. With a strong foundation in networking, incident management, and IT support. Experienced in monitoring, troubleshooting, SLA management, and cross-team coordination. Certified in Google IT Support, Networking, and Zero Trust (ZTCA), with a focused goal of advancing toward CCNA/CCNP-level expertise and deeper cybersecurity specialization."
                     period="August 2023 – Present"
                 />
 
