@@ -45,6 +45,12 @@ export default function ToolsSection({ animated = false }: ToolsSectionProps) {
                         subtitle="Linux Server OS"
                         iconSrc="/tools/ubuntu.svg"
                     />
+
+                    <ToolsRow
+                        name="SolarWinds"
+                        subtitle="solarwinds"
+                        iconSrc="/solarwinds.svg"
+                    />
                     
                 </div>
             </div>
