@@ -11,7 +11,7 @@ export default function ExperienceSection({ animated = false }: ProjectsSectionP
             <div className="px-10">
                 <h2 className="font-black leading-[0.9] tracking-tight">
                     <span className="block text-[clamp(3.5rem,7vw,7rem)] text-black dark:text-white">
-                        2 + YEARS OF
+                        2 + YEARS
                     </span>
                     <span className="block text-[clamp(3.5rem,7vw,7rem)] text-zinc-500/50">
                         EXPERIENCE
