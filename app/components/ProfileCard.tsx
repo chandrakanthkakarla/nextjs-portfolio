@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Linkedin, InstagramIcon } from "lucide-react";
 
@@ -13,15 +12,25 @@ export default function ProfileCard() {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="relative overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+      className="relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5"
     >
-      {/* dotted arc top */}
-      <div className="pointer-events-none absolute -left-10 -top-10 h-44 w-44 rounded-full border-[4px] border-dashed border-gray-300 opacity-90" />
+      {/* spinning dashed ring — top left */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        className="pointer-events-none absolute -left-10 -top-10 h-44 w-44 rounded-full border-[3px] border-dashed border-gray-300 opacity-60"
+      />
+
+      {/* spinning dashed ring — bottom right */}
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+        className="pointer-events-none absolute -right-10 -bottom-10 h-44 w-44 rounded-full border-[3px] border-dashed border-gray-200 opacity-40"
+      />
 
       <div className="p-7">
-
-        {/* ✅ Image — fixed 210px height, never changes, face always visible */}
+        {/* image */}
         <div className="rounded-3xl bg-white p-4">
           <div className="h-[210px] w-full overflow-hidden rounded-3xl">
             <img
@@ -37,25 +46,22 @@ export default function ProfileCard() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-7 text-center text-4xl font-black tracking-tight text-zinc-900"
+          className="mt-6 text-center text-4xl font-black tracking-tight text-zinc-900"
         >
           Chandrakanth Kakarla
         </motion.h2>
 
-        {/* dotted arc left */}
-        <div className="relative mt-2 flex items-center justify-center">
-          <div className="pointer-events-none absolute -left-12 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full border-[4px] border-dashed border-gray-300 opacity-90" />
-        </div>
-
-        {/* description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-4 text-center text-lg leading-snug text-zinc-500"
+        {/* badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.45, duration: 0.5 }}
+          className="mt-3 flex justify-center"
         >
-          A Network Engineer
-        </motion.p>
+          <span className="rounded-full bg-zinc-100 px-4 py-1 text-sm font-semibold text-zinc-500 ring-1 ring-zinc-200">
+            Network Engineer
+          </span>
+        </motion.div>
 
         {/* socials */}
         <motion.div
@@ -64,48 +70,25 @@ export default function ProfileCard() {
           animate="visible"
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.15, delayChildren: 0.6 } },
+            visible: { transition: { staggerChildren: 0.12, delayChildren: 0.6 } },
           }}
         >
           {socials.map(({ label, href, icon: Icon }) => (
-            <motion.div
+            <motion.a
               key={label}
-              variants={{
-                hidden:  { opacity: 0, y: 12 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={label}
+              variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
+              whileHover={{ scale: 1.2, y: -3 }}
+              className="grid h-11 w-11 place-items-center rounded-full text-zinc-400 transition-colors hover:text-zinc-900"
             >
-              <SocialIcon label={label} href={href}>
-                <Icon size={22} strokeWidth={2.2} />
-              </SocialIcon>
-            </motion.div>
+              <Icon size={22} strokeWidth={2.2} />
+            </motion.a>
           ))}
         </motion.div>
-
       </div>
     </motion.div>
-  );
-}
-
-function SocialIcon({
-  children, label, href,
-}: {
-  children: React.ReactNode;
-  label: string;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={label}
-      title={label}
-      className="relative z-20 grid h-11 w-11 place-items-center rounded-full
-        text-gray-500 transition-all duration-300
-        hover:scale-125 hover:text-black hover:-translate-y-1"
-    >
-      {children}
-    </a>
   );
 }
