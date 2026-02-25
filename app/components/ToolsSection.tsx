@@ -48,10 +48,12 @@ export default function ToolsSection({ animated = false }: ToolsSectionProps) {
 
                     <ToolsRow
                         name="SolarWinds"
-                        subtitle="solarwinds"
+                        subtitle="Monitoring Tool"
                         iconSrc="/solarwinds.svg"
                     />
                     
+                    
+            
                 </div>
             </div>
         </section>
