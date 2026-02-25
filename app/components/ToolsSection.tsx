@@ -25,33 +25,12 @@ export default function ToolsSection({ animated = false }: ToolsSectionProps) {
             <div className="px-10">
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     {/* Backend core */}
-                    <ToolsRow
-                        name="Laravel"
-                        subtitle="Backend Framework"
-                        iconSrc="/tools/laravel.svg"
-                    />
-                    <ToolsRow
-                        name="PHP"
-                        subtitle="Backend Language"
-                        iconSrc="/tools/php.svg"
-                    />
+                
 
-                    {/* Data layer */}
-                    <ToolsRow
-                        name="MySQL"
-                        subtitle="Relational Database"
-                        iconSrc="/tools/mysql.svg"
-                    />
-                    <ToolsRow
-                        name="Redis"
-                        subtitle="Cache & Queue Store"
-                        iconSrc="/tools/redis.svg"
-                    />
-
-                    <ToolsRow
-                        name="Tailwind CSS"
-                        subtitle="UI Styling"
-                        iconSrc="/tools/tailwindcss.svg"
+                 <ToolsRow
+                        name="AWS"
+                        subtitle="AWS"
+                        iconSrc="/AWS.svg"
                     />
 
                     <ToolsRow
@@ -66,11 +45,7 @@ export default function ToolsSection({ animated = false }: ToolsSectionProps) {
                         subtitle="Linux Server OS"
                         iconSrc="/tools/ubuntu.svg"
                     />
-                    <ToolsRow
-                        name="Affine"
-                        subtitle="Notes & Docs"
-                        iconSrc="/tools/affine.svg"
-                    />
+                    
                 </div>
             </div>
         </section>
