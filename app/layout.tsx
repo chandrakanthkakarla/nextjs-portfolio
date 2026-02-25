@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import Footer from "./components/Footer";
 import ScrollToTitleOnMobile from "./components/ScrollToTitleOnMobile";
 import { Analytics } from "@vercel/analytics/next";
-import { AnimatePresence } from "framer-motion"; // ✅ ADD THIS
+import { AnimatePresence } from "framer-motion";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,6 +12,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
 });
+
+// ✅ Stops mobile browser from auto-zooming
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function RootLayout({
   children,
@@ -24,9 +32,9 @@ export default function RootLayout({
         <Navbar />
         <ScrollToTitleOnMobile />
         <main className="pt-24">
-          <AnimatePresence mode="wait"> {/* ✅ ADD THIS */}
+          <AnimatePresence mode="wait">
             {children}
-          </AnimatePresence>             {/* ✅ ADD THIS */}
+          </AnimatePresence>
         </main>
         <Footer />
       </body>
