@@ -4,7 +4,7 @@ import { Linkedin, InstagramIcon } from "lucide-react";
 
 const socials = [
   { label: "LinkedIn",  href: "https://www.linkedin.com/in/chandrakanth18/", icon: Linkedin },
-  { label: "Instagram", href: "https://www.instagram.com/ckchowdary21",      icon: InstagramIcon },
+  // { label: "Instagram", href: "https://www.instagram.com/ckchowdary21",      icon: InstagramIcon },
 ];
 
 export default function ProfileCard() {
